@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Green Guardians of MUST</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <!-- Include the Leaflet CSS for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+
+    <style>
+
+        /* General Styles */
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #e9e0c9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #5c8233;
+    color: white;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #4d7130;
+    z-index: -1;
+}
+
+nav {
+            padding: 10px;
+            text-align: right;
+            font-size: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+}
+
+/* Contact Form Section Styles */
+.contact-form {
+    margin-bottom: 30px;
+}
+
+.contact-form h1 {
+    color: #4CAF50;
+}
+
+.contact-form form {
+    max-width: 400px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Contact Information Section Styles */
+.contact-info {
+    margin-bottom: 30px;
+    text-align:center;
+}
+
+.contact-info h1 {
+    color: #4CAF50;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section Styles */
+.map {
+    margin-bottom: 30px;
+}
+
+.map h1 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.map #map {
+    height: 400px;
+    width: 100%;
+}
+.logo img{
+    width: 80px;
+    height: auto;
+}
+
+    </style>
+</head>
+
+<header>
+    <div class="logo">
+        <img src="bdfgdth.png" alt="Green Guardians of MUST Logo"> <!-- Placeholder for club logo -->
+    </div>
+    <nav>
+        
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities</a>
+            <a href="events.html">Events</a>
+            <a href="join.html">Join Us</a>
+            <a href="contact.html">Contact</a>
+    
+    </nav>
+</header>
+
+
+<body>
+   
+    
+    <main>
+        <!-- Contact Form Section -->
+        <!-- <section class="contact-form">
+            <h1>Contact Us</h1>
+            <form action="submit_contact.php" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section> -->
+
+        <!-- Contact Information Section -->
+        <section class="contact-info">
+            <h1>Our Contact Information</h1><br>
+            <p>Email: <a href="mailto:info@greenguardiansmust.com">info@greenguardiansmust.com</a></p>
+            <p>Phone: 0627669264</p>
+            <p>Office Location: Room 123, Science Building, Mbeya University of Science and Technology</p>
+        </section>
+
+        
+        <section class="map">
+            <h1>Find Us Here</h1>
+            <div id="map" style="height: 400px;"></div> <!-- Map container -->
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact us at: <a href="mailto:info@greenguardiansmust.com">info@greenguardiansmust.com</a></p>
+            <p>Follow us on social media:</p>
+            <ul class="social-media">
+                <li><a href="https://facebook.com/greenguardiansmust" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/greenguardiansmust" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/greenguardiansmust" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Include the Leaflet JavaScript for the map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([-8.917, 33.445], 15); // Replace with actual coordinates of the office location
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker to the map
+        L.marker([-8.917, 33.445]).addTo(map) // Replace with actual coordinates of the office location
+            .bindPopup('Green Guardians of MUST Office')
+            .openPopup();
+        
+    </script>
+    <script src = "script.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+
+<?php
+$con=new mysqli('localhost', 'root','','greenguardiansdb');
+
+if($con){
+
+}else{
+    die(mysqli-error($con));
+}
+header('location: index.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Guardians of MUST</title>
+  
+    <style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(235, 238, 245);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #5c8233;
+    color: white;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #4d7130;
+    z-index: -1;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav {
+            padding: 10px;
+            text-align: right;
+            font-size: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background: url('hero.jpg') no-repeat center center/cover;
+    border-bottom: 10px solid #5c8233;
+}
+
+.hero-text {
+    background: rgba(92, 130, 51, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons .btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #7da453;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn:hover {
+    background-color: #95c26b;
+}
+
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #f5f1e3;
+    border-top: 10px solid #d4e157;
+}
+
+.featured div {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.featured ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.featured ul li {
+    margin-bottom: 10px;
+}
+
+.featured ul li a {
+    text-decoration: none;
+    color: #7da453;
+}
+
+.featured ul li a:hover {
+    text-decoration: underline;
+}
+
+.activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #5c8233;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #4d7130;
+    z-index: -1;
+}
+
+footer a {
+    color: #d4e157;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .cta-buttons .btn {
+        padding: 8px 16px;
+        margin: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featured {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+    </style>
+    
+
+        
+</head>
+
+
+
+<header>
+    <div class="logo img">
+        <img src="bdfgdth.png" alt="Green Guardians of MUST Logo"> 
+    </div>
+    <nav>
+        
+            <a href="index.php">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities</a>
+            <a href="events.html">Events</a>
+            <a href="join.html">Join Us</a>
+            <a href="contact.html">Contact</a>
+    
+    </nav>
+</header>
+
+
+
+<body>
+    
+    
+
+    
+    <main>
+        <section class="hero">
+            
+            <div class="hero-text">
+                <h1>Empowering a Sustainable Future at MUST</h1>
+                <p>Welcome to the Green Guardians of MUST! We are dedicated to promoting environmental awareness and sustainable practices on our campus and beyond.</p>
+                <div class="cta-buttons">
+                    <a href="join.html" class="btn">Join Us</a>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="featured">
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li><a href="events.html">Campus Clean-Up - June 1, 2024</a></li>
+                    <li><a href="events.html">Tree Planting Day - June 15, 2024</a></li>
+                    <li><a href="events.html">Sustainability Workshop - July 5, 2024</a></li>
+                </ul>
+                <div class="activity">
+                    <img src="member.jpeg" alt="Activity Image"> 
+                    <p>Our members participated in a beach clean up event, removing plastic waste from the shoreline.</p>
+                </div>
+            </div>
+
+            <div class="upcoming-events">
+                <h2>Past Activities</h2>
+                <div class="activity">
+                    <img src="hostel.jpeg" alt=" our past cleaning">
+                    <p>privious we used to take a clean up in our hostels</p>
+                </div>
+                <div class="activity">
+                    <img src="hostel.jpeg" alt="Activity Image"> 
+                    <p>Our members participated in market clear up to .</p>
+                </div>
+
+            </div>
+
+            <div class="recent-activities">
+                <h2>Recent Activities</h2>
+                <div class="activity">
+                    <img src="bin.jpeg" alt="Activity Image"> 
+                    <p>We recently organized a successful recycling drive, collecting over 500 kg of recyclable materials.</p>
+                </div>
+                <div class="activity">
+                    <img src="member.jpeg" alt="Activity Image"> 
+                    <p>Our members participated in a beach clean-up event, removing plastic waste from the shoreline.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <div class="contact-info">
+            <p>Contact us at: <a href="mailto:info@greenguardiansmust.com">info@greenguardiansmust.com</a></p>
+            <p>Follow us on social media:</p>
+            <ul class="social-media">
+                <li><a href="https://facebook.com/greenguardiansmust" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/greenguardiansmust" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/greenguardiansmust" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src = "script.js"></script>
+    </body>
+    </html>
+    
+

@@ -1,0 +1,41 @@
+header {
+    background-color: aquamarine;
+    padding: auto;
+    text-align: center;
+}
+
+nav ul{
+    list-style: lower-alpha;
+    background-color: aqua;
+    text-align: center;
+    padding: auto;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    color: rgb(179, 235, 9);
+    text-decoration: double;
+    padding: auto;
+}
+nav ul li a:hover{
+    background-color: rgb(15, 128, 240);
+}
+
+
+form{
+    width: 300px;
+    margin: auto;
+}
+label{
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+input <type="text">,
+input <type="email">,
+textarea{
+    width: 100%;
+    padding: auto;
+    margin: 10px;
+}
